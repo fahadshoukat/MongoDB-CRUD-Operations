@@ -33,7 +33,7 @@ const AllUsers = () => {
     }
     axios.put(`${URL}/editUser`, updateData).then((res) => {
       console.log("Message from server", res.data);
-      navigate('/allUsers')
+      navigate('/getUsers')
       toast.info(res.data, {
         position: "top-right",
         autoClose: 5000,
