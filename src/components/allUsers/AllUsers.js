@@ -10,7 +10,7 @@ const AllUsers = () => {
   const [modal, setModal] = useState({});
   const [deleteUser, setDeleteUser] = useState({});
   const [isLoading, setIsLoading] = useState(false)
-  const URL = window.URL;
+  const URL = process.env.REACT_APP_END_URL;
   const navigate = useNavigate();
   const handleChange = (e) => {
     setModal({
@@ -73,7 +73,7 @@ const AllUsers = () => {
     }).catch(error => {
       console.log(error);
     })
-  }, [users]);
+  }, [users , URL]);
 
   return (
     <div className="container">
